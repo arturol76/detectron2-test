@@ -1,7 +1,8 @@
 FROM arturol76/phusion-baseimage:0.11
 LABEL maintainer="arturol76"
 
-RUN apt-get -y install python3-pip \
+RUN apt-get update \
+	&& apt-get -y install python3-pip \
 	&& pip3 install --upgrade pip
 
 #deploy sample python app
